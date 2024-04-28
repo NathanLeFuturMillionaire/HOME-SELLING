@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "alpha-echo";
+  src: local("alpha-echo"),
+    url("../fonts/alpha-echo/alpha_echo-webfont.ttf") format("truetype"),
+    url("../fonts/alpha-echo/alpha_echo-webfont.woff") format("woff");
+  ascent-override: normal;
+}
+
+@font-face {
+  font-family: "source-sans";
+  src: local("source-sans"),
+    url("../fonts/source-sans-pro/SourceSansPro-Regular.otf") format("opentype");
+  ascent-override: normal;
+}
+
+header {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  overflow: hidden;
+}
+
+nav a {
+  color: #000;
+  padding: 10px;
+  text-decoration: none;
+  transition: .3s
+}
+
+nav a:hover {
+  color: green;
+}
+
+header #logo a {
+  text-decoration: none;
+  display: block;
+  color: black;
+  font: normal 1.4em "alpha-echo";
+}
+
+#banner {
+  position: relative;
+  background: #8a6feb;
+  padding: 10px;
+  height: 450px;
+}
+
+#banner .banner-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#banner .banner-content .teaser-images {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner .banner-content .teaser-images img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#banner .banner-content .teaser-image.teaser-image-2 img {
+  z-index: 1;
+  margin-left: -30px;
+}
+
+#banner .banner-content .teaser-image.teaser-image-3 img {
+  margin-top: -120px;
+}
+
+#banner .banner-content .tagline-title h2 {
+  font: normal 3.4em "alpha-echo";
+}
+
+#banner .banner-content .tagline-title p {
+  font: normal 1.2em "source-sans";
+}
+
+#banner .banner-content .tagline-title a {
+  font-size: 1.2em;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  background: skyblue;
+  padding: 15px;
+  margin: 20px 0 0 0;
+  min-width: 220px;
+  text-align: center;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+#banner .banner-content .tagline-title a:hover {
+  transition: .3s;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px
+}
+
+section > h2 {
+  font: normal 600 2.1em "source-sans";
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+section > h2::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  background: rgb(121, 49, 238);
+  bottom: 15px;
+  transform: translateX(-177px) translateY(5px);
+  border-radius: 30px;
+}
+
+section > h2 ~ p {
+  text-align: center;
+  font: normal 300 1.1em "source-sans";
+  margin: 15px auto;
+  width: 50%;
+}
+
+section .house-list {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+section .house-list .card {
+  width: 290px;
+  height: 310px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+section .house-list .card .card-header {
+  overflow: hidden;
+}
+
+section .house-list .card img {
+  width: 350px;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: .3s;
+}
+
+section .house-list .card:hover img {
+  transform: scale(1.2);
+}
+
+section .house-list .card .card-body {
+  padding: 10px;
+}
+
+section .house-list .card .card-body > h3 {
+  font-size: 1.2em;
+}
+
+section .house-list .villa-features .price,
+section .house-list .villa-features .rooms,
+section .house-list .villa-features .saloons,
+section .house-list .villa-features .paints {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.1em;
+}
+
+section .house-list .villa-features strong {
+  font-weight: 500;
+}
